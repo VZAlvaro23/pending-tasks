@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --background-gradient-top:#667EEA;
+    --background-gradient-bottom: #764BA2;
+    --gradient-top: #4D597D;
+    --gradient-bottom: #283048;
+    --separation-lines: #232323;
+    --box-shadow: #0094FF;
+    --font-color: #fff;
+    --text-shadow: #000;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background: linear-gradient(to bottom, var(--background-gradient-top), var(--background-gradient-bottom));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 20vw;
+    height: 70vh;
+    margin: 50px;
+}
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--gradient-top), var(--gradient-bottom));
+    border-radius: 5px;
+    color: var(--font-color);
+    box-shadow: 0px 4px 4px var(--box-shadow), 0px 4px 4px var(--box-shadow);
+    font-weight: 400;
+    height: 10%;
+    font-size: 1rem;
+    text-shadow: 0px 4px 4px var(--text-shadow);
+}
+
+ul {
+    margin-top: 30px;
+    color: var(--font-color);
+    background: linear-gradient(to bottom, var(--gradient-top), var(--gradient-bottom));
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px var(--box-shadow), 0px 4px 4px var(--box-shadow);
+    text-shadow: 0px 4px 4px var(--text-shadow);
+    padding: 1em
+}
+li::after {
+    margin-top: 10px;
+    content: '';
+    display: block;
+    width: 90%;
+    height: 0.5px;
+    background-color: var(--separation-lines);
+    box-shadow: 0px 4px 4px var(--text-shadow)
+}
+li:last-child {
+    margin-bottom: 30px;
+}
+li::before {
+    content: url(../img/wall-clock-small.png);
+    position: relative;
+    right: 10px;
+    top: 4px;
+}
+
+li {
+    list-style: none;
+    margin-top: 30px;
+    margin-left: 30px;
+    text-shadow: 0px 4px 4px var(--text-shadow);
+}
+.completed_tasks_list li::before {
+    content: '';
+}
+.active {
+    text-shadow: 0px 4px 4px var(--box-shadow);
+}
+
+
