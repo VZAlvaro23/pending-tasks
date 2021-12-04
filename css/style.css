@@ -66,7 +66,7 @@ li:last-child {
     margin-bottom: 30px;
 }
 li::before {
-    content: url(../img/wall-clock-small.png);
+    content: url(../img/wall-clock.png);
     position: relative;
     right: 10px;
     top: 4px;
