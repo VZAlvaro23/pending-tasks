@@ -21,9 +21,17 @@ completed_tasks.addEventListener('dragover', (e) => {
 
 completed_tasks.addEventListener('drop', (e) => {
     e.preventDefault();
+    
     const element = document.getElementById(e.dataTransfer.getData('text'));
+    const elementHr = element.nextElementSibling;
+    const hr = document.createElement('hr');
+
     element.classList.remove('active');
 
+    if(element.nextElementSibling) {
+        elementHr.remove();      
+    } 
     completed_tasks_list.append(element);
+    completed_tasks_list.append(hr);
 
 })

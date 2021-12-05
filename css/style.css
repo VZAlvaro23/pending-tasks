@@ -27,7 +27,6 @@ body {
 
 div {
     width: 20vw;
-    height: 70vh;
     margin: 50px;
 }
 h1 {
@@ -39,50 +38,45 @@ h1 {
     color: var(--font-color);
     box-shadow: 0px 4px 4px var(--box-shadow), 0px 4px 4px var(--box-shadow);
     font-weight: 400;
-    height: 10%;
     font-size: 1rem;
+    padding: 1rem;
     text-shadow: 0px 4px 4px var(--text-shadow);
 }
 
 ul {
-    margin-top: 30px;
+    margin-top: 1em;
     color: var(--font-color);
     background: linear-gradient(to bottom, var(--gradient-top), var(--gradient-bottom));
     border-radius: 5px;
     box-shadow: 0px 4px 4px var(--box-shadow), 0px 4px 4px var(--box-shadow);
     text-shadow: 0px 4px 4px var(--text-shadow);
-    padding: 1em
-}
-li::after {
-    margin-top: 10px;
-    content: '';
-    display: block;
-    width: 90%;
-    height: 0.5px;
-    background-color: var(--separation-lines);
-    box-shadow: 0px 4px 4px var(--text-shadow)
-}
-li:last-child {
-    margin-bottom: 30px;
-}
-li::before {
-    content: url(../img/wall-clock.png);
-    position: relative;
-    right: 10px;
-    top: 4px;
 }
 
+/* hr:last-child {
+    padding-bottom: 1em;
+} */
+
 li {
+    padding: 1em;
+    padding-left: 2em;
     list-style: none;
-    margin-top: 30px;
-    margin-left: 30px;
     text-shadow: 0px 4px 4px var(--text-shadow);
 }
-.completed_tasks_list li::before {
-    content: '';
-}
+
 .active {
     text-shadow: 0px 4px 4px var(--box-shadow);
 }
-
-
+hr{
+border: 0;
+height: 1px;
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+@media only screen and (max-width: 450px) {
+.container {
+    flex-direction: column;
+}
+div {
+    width: 80vw;
+    height: ;
+}
+}
